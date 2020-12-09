@@ -23,12 +23,10 @@ public class Field {
         if (getPercentage() > 0.5) {
             workers.remove(1);
             System.out.println("Пересчитал количество работников и одного решил убрать");
-        }
-        else if (getPercentage() < 0.2) {
+        } else if (getPercentage() < 0.2) {
             addWorker("Bot" + Math.random());
             System.out.println("Пересчитал количество работников и одного решил добавить");
-        }
-        else {
+        } else {
             System.out.println("Работников в самый раз (20 - 50%)");
         }
     }
@@ -37,12 +35,12 @@ public class Field {
         return (workers.size() / 5.0);
     }
 
-    public void whatAboutPercents() {
-        System.out.println("Cейчас заполнено " + getPercentage() * 100 + " процентов");
-    }
-
     public void setPercentage(int percentage) {
         this.percentage = percentage;
+    }
+
+    public void whatAboutPercents() {
+        System.out.println("Cейчас заполнено " + getPercentage() * 100 + " процентов");
     }
 
     public List<String> getWorkers() {
